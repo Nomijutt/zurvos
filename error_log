@@ -1,0 +1,2 @@
+[15-Sep-2020 16:28:48 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\apicontrollers\ProductOrderController::allorder() in /home/imtekh/public_html/noman/zurvos/app/Http/Controllers/apicontrollers/ProductOrderController.php on line 53
+[21-Sep-2020 17:17:18 UTC] PHP Fatal error:  Can't use method return value in write context in /home/imtekh/public_html/noman/zurvos/app/Http/Resources/gymstatdetail.php on line 27

@@ -18,7 +18,7 @@ use App\models\VideoOrder;
 use App\Http\Resources\gymstatdetail;
 class CustomersController extends Controller
 {
-	use Usertrait;
+  use Usertrait;
 
 
      public function manageusers(){
@@ -106,6 +106,8 @@ public function taguser(Request $request)
         $customer->city = $request->city;
         $customer->phone_no = $request->phone_no;
         $customer->zip_code =$request->zip_code;
+        $customer->shirt_size =$request->shirt_size;
+        $customer->street_address =$request->street_address;
          $customer->bio =$request->bio;
         $customer->street_address =$request->street_address;
         if($request->hasFile('user_image')){
@@ -140,10 +142,10 @@ public function taguser(Request $request)
         public function userlogin(Request $request){
 
         if (empty($request->email) || empty($request->password)) {
-    		
-    		return response(['message' => 'Email And Password Are Required','status' =>'error']);
+        
+        return response(['message' => 'Email And Password Are Required','status' =>'error']);
 
-    	}else{
+      }else{
         $result = Customer::where('email', '=', $request->input('email'))->first();
 
         if (\Hash::check($request->password, $result->password)) {

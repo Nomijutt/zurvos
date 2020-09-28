@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-
+use Carbon\Carbon;
 class UserCheckoutHistory extends JsonResource
 {
     /**
@@ -22,7 +22,7 @@ class UserCheckoutHistory extends JsonResource
 
             'user_name'=>$this->full_name,
 
-            'check_out' => $this->check_out ==null ? '0' : $this->check_out,
+            'check_out' => $this->check_out ==null ? '0' : Carbon::parse($this->check_out)->diffForHumans(),
 
             
 

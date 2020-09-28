@@ -10,6 +10,7 @@ use App\Http\Resources\RecentgymsCollection;
 use App\Http\Resources\GymsCollection;
 use App\Http\Resources\GymDetail;
 use DB;
+use App\models\GymNotification;
 use App\Http\Resources\GymLoginResource;
 class GymsController extends Controller
 {
@@ -108,7 +109,7 @@ class GymsController extends Controller
 
      public function seeall(){
 
-    		$gyms=Gym::where('status',null)->get();
+    		$gyms=Gym::all();
 
 
     		  if ($gyms->count() >0) {

@@ -18,7 +18,7 @@ class InfluenceCollection extends Resource
 
              'id' =>$this->id,
 
-            'full_name' => $this->full_name ==null ? '0' : $this->full_name,
+            'full_name' => $this->name ==null ? '0' : $this->name,
 
             'email' => $this->email ==null ? '0' : $this->email,
 

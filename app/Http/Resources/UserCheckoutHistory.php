@@ -23,6 +23,7 @@ class UserCheckoutHistory extends JsonResource
             'user_name'=>$this->full_name,
 
             'check_out' => $this->check_out ==null ? '0' : Carbon::parse($this->check_out)->diffForHumans(),
+            'user_image'=>$this->user_image ==null ? '0' : asset('public/userimage/'.$this->user_image)
 
             
 

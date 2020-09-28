@@ -15,7 +15,7 @@ class UserCheckController extends Controller
     {
     	$user=DB::table('user_checks')->where('gym_id',$id)
     	->join('customers','customers.id','user_checks.user_id')
-    	->select('user_checks.*','customers.id as customer_id','customers.full_name')
+    	->select('user_checks.*','customers.id as customer_id','customers.full_name','customers.user_image')
     	->get();
     	if ($user->count() >0) {
 
@@ -31,7 +31,7 @@ class UserCheckController extends Controller
     {
     	$user=DB::table('user_checks')->where('gym_id',$id)
     	->join('customers','customers.id','user_checks.user_id')
-    	->select('user_checks.*','customers.id as customer_id','customers.full_name')
+    	->select('user_checks.*','customers.id as customer_id','customers.full_name','customers.user_image')
     	->get();
     	if ($user->count() >0) {
 
@@ -47,7 +47,7 @@ class UserCheckController extends Controller
     {
     	$user=DB::table('user_checks')->where('gym_id',$id)
     	->join('customers','customers.id','user_checks.user_id')
-    	->select('user_checks.*','customers.id as customer_id','customers.full_name')
+    	->select('user_checks.*','customers.id as customer_id','customers.full_name','customers.user_image')
     	->get();
     	if ($user->count() >0) {
 

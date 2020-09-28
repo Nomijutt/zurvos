@@ -24,7 +24,7 @@ class UserCheckinHistory extends JsonResource
 
             'check_in' => $this->check_in ==null ? '0' : Carbon::parse($this->check_in)->diffForHumans(),
 
-            
+            'user_image'=>$this->user_image ==null ? '0' : asset('public/userimage/'.$this->user_image)
 
         ];
     }

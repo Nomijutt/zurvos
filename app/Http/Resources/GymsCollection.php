@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
-
+use Carbon\Carbon;
 class GymsCollection extends Resource
 {
     /**
@@ -40,9 +40,7 @@ class GymsCollection extends Resource
 
             'status' => $this->status ==null ? 'not approved' : $this->status,
 
-            'date' =>  date('d/m/Y',strtotime($this->created_at)),
-
-            'time' =>  date('H:i:s',strtotime($this->created_at)),     
+            'datetime'=>Carbon::parse($this->created_at)->diffForHumans(),    
 
 
         ];
